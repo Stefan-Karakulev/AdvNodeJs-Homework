@@ -10,7 +10,7 @@ import { Repository } from 'typeorm';
 export class BudgetService {
   constructor(
     @InjectRepository(BudgetEntity)
-    private tripRepository: Repository<BudgetEntity>,
+    private BudgetRepository: Repository<BudgetEntity>,
 
    //Neznam na Koe repository treba da se napravi inject...
   ) {}
