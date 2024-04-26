@@ -17,12 +17,12 @@ export class BudgetController {
     return this.budgetService.createBudget(createBudgetDto);
   }
 
-  @Get('id')
+  @Get('/:id')
   getBudgetById(@Param('id') id: string): Budget {
     return this.budgetService.getBudgetById(id);
   }
 
-  @Put('id')
+  @Put('/:id')
   updateBudget(
     @Param('id') id: string,
     @Body() updateBudgetDto: UpdateBudgetDto,
@@ -30,7 +30,7 @@ export class BudgetController {
     return this.budgetService.updateBudget(id, updateBudgetDto);
   }
 
-  @Delete('id')
+  @Delete('/:id')
   deleteBudget(@Param('id') id: string): void {
     this.budgetService.deleteBudget(id);
   }
